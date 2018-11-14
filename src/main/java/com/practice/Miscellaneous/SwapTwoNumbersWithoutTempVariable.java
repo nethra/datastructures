@@ -5,21 +5,21 @@ public class SwapTwoNumbersWithoutTempVariable {
         int a = 30;
         int b = 60;
 
-        a = a+b; //90
+        /*a = a+b; //90
         b = a-b; //30
         a= a-b; //60
 
         System.out.println(a);
-        System.out.println(b);
+        System.out.println(b);*/
 
 
         //XOR operation
 
-      /*  a = a^b;
+        a = a^b;
         b = a^b;
         a= a^b;
         System.out.println(a);
-        System.out.println(b);*/
+        System.out.println(b);
 
     }
 }
