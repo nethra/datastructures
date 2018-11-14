@@ -49,6 +49,45 @@ public class SingleLinkedList {
         prevNode.next = n;
     }
 
+    public static void deleteAtEnd()
+    {
+        Node lastBeforeNode = null;
+        Node n = head;
+
+        while(n.next.next !=null)
+        {
+            lastBeforeNode = n;
+            n=n.next;
+        }
+        lastBeforeNode.next =null;
+
+    }
+
+    public static void deleteAtFront()
+    {
+
+        Node n = head;
+        head=n.next;
+
+    }
+
+    public static void deleteNode(Node node)
+    {
+
+        if (node == null) {
+            System.out.println("The given  node cannot be null");
+            return;
+        }
+
+       Node n = head;
+       while(n.next!=node)
+       {
+           n = n.next;
+       }
+       n.next=n.next.next;
+
+
+    }
     public static void PrintList() {
         Node n = head;
         while (n != null) {
@@ -65,6 +104,9 @@ public class SingleLinkedList {
         s.InsertAtEnd(4);
         s.InsertAtEnd(5);
         s.InsertAfter(head.next.next,6);
+        s.deleteNode(head.next.next);
+        s.deleteAtEnd();
+        s.deleteAtFront();
         PrintList();
 
     }
