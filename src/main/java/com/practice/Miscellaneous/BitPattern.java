@@ -71,7 +71,8 @@ public class BitPattern {
 
             if ((m+n)!=0 && strLen % (m + n) == 0) {
                 int quot = strLen / (m + n);
-                char[] charArray = str.toCharArray();
+
+               /* char[] charArray = str.toCharArray();
 
                 for (int j = 0; j < charArray.length; j++) {
                     if (charArray[j] == '0') {
@@ -80,7 +81,19 @@ public class BitPattern {
                     } else if (charArray[j] == '1') {
                         noOfOnes++;
                     }
-                }
+                }*/
+
+               for(int j=0; j<str.length(); j++)
+               {
+                   if(str.charAt(j) == '0')
+                   {
+                       noOfZeroes++;
+                   }
+                   else if(str.charAt(j) == '1')
+                   {
+                       noOfOnes++;
+                   }
+               }
 
                 if (quot * m == noOfZeroes && quot * n == noOfOnes) {
                     outArray[i] = "YES";
